@@ -1,3 +1,5 @@
+import { GRID_WIDTH } from "./constants";
+
 /**
  * 将一个二进制数组成的数组拼成二进制字符串，以0b开头
  * @param {Array} array 二进制数0、1组成的数组
@@ -29,8 +31,17 @@ function parse2BinaryArray(binaryString: string) {
   return binaryString.split('').map(Number);
 }
 
-
+/**
+ * 判断某一行是否全是0
+ * @param row 
+ */
+function isZeroRow(row: number[], length = GRID_WIDTH) {
+  return +getBinaryString(row, length) === 0;
+}
 
 export {
-  parse2BinaryArray
+  parse2BinaryArray,
+  getBinaryString,
+  parse2BinaryString,
+  isZeroRow,
 }

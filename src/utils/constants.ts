@@ -3,3 +3,9 @@ export const GRID_WIDTH = 10;
 
 // 游戏区canvas的高度格数
 export const GRID_HEIGHT = 20;
+
+export enum Direction {
+  left = 'left',
+  right = 'right',
+  down = 'down',
+};
